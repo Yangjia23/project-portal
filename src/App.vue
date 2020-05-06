@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition name="el-fade-in" mode="out-in">
+    <transition name="el-fade-in" mode="in-out">
       <Dashboard></Dashboard>
     </transition>
   </div>
