@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 12.x
       
-       - name: Install rsync
+      - name: Install rsync
         run: |
           sudo apt-get update && sudo apt-get install -y rsync
 
