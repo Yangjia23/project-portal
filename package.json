@@ -2,12 +2,12 @@
   "name": "project-portal",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yangjia23.github.io/portal",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "npm run format && vue-cli-service lint",
     "format": "prettier --config .prettierrc --write src/**/",
-    "homepage": "https://github.com/Yangjia23/portal"
   },
   "dependencies": {
     "core-js": "^3.6.4",
