@@ -55,4 +55,46 @@ export const projectTypes = [
       },
     ],
   },
+  {
+    title: 'CSS',
+    subTitle: '不使用任何UI框架, 使用原生JS造轮子',
+    value: 'CSS',
+    children: [
+      {
+        title: '轮播图',
+        desc: '轮播图',
+        tag: ['组件'],
+        disabled: false,
+        github: '',
+      },
+      {
+        title: 'xxxxxx',
+        desc: 'xxxxxxxx',
+        tag: ['组件'],
+        disabled: false,
+        github: '',
+      },
+    ],
+  },
+  {
+    title: 'React Collection',
+    subTitle: '不使用任何UI框架, 使用原生JS造轮子',
+    value: 'React',
+    children: [
+      {
+        title: '轮播图',
+        desc: '轮播图',
+        tag: ['组件'],
+        disabled: false,
+        github: '',
+      },
+      {
+        title: 'xxxxxx',
+        desc: 'xxxxxxxx',
+        tag: ['组件'],
+        disabled: false,
+        github: '',
+      },
+    ],
+  },
 ];

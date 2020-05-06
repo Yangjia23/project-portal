@@ -1,6 +1,13 @@
 <template>
   <div class="header-nav">
-    <HeaderNavItem v-for="(nav, index) in list" :key="index" :item="nav" />
+    <HeaderNavItem
+      class="header-nav-item"
+      v-for="(nav, index) in list"
+      :key="index"
+      :item="nav"
+      :class="{ 'is-active': nav.title === value }"
+      @item-click="onItemClick"
+    />
   </div>
 </template>
 
@@ -14,6 +21,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    value: {
+      type: String,
+      default: '',
+    },
   },
   components: {
     HeaderNavItem,
@@ -21,7 +32,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    onItemClick(value) {
+      this.$emit('input', value);
+    },
+  },
 };
 </script>
 
@@ -35,5 +50,10 @@ export default {
   display: flex;
   align-items: center;
   padding: 0 40px;
+  &-item {
+    &.is-active {
+      border-bottom: 2px solid #ff7260;
+    }
+  }
 }
 </style>
