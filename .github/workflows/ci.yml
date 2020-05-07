@@ -49,17 +49,17 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout 🛎️
-          uses: actions/checkout@master
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
 
-        - name: Build and Deploy 🚀
-          uses: jeoy/github-deploy-actions@master
-            env:
-              COMMIT_EMAIL: yj960203only@gmail.com
-              COMMIT_NAME: yangjay
-              ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-              BASE_BRANCH: master
-              DEPLOY_BRANCH: gh-pages
-              BUILD_SCRIPT: yarn && yarn build
-              FOLDER: build
+      - name: Build and Deploy 🚀
+        uses: jeoy/github-deploy-actions@master
+          env:
+            COMMIT_EMAIL: yj960203only@gmail.com
+            COMMIT_NAME: yangjay
+            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+            BASE_BRANCH: master
+            DEPLOY_BRANCH: gh-pages
+            BUILD_SCRIPT: yarn && yarn build
+            FOLDER: build
