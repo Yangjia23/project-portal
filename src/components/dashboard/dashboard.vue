@@ -61,7 +61,7 @@ export default {
     position: relative;
     top: -40px;
     min-width: 900px;
-    margin: 0 120px;
+    margin: 0 80px;
   }
 }
 </style>
