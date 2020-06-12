@@ -1,14 +1,14 @@
 <template>
   <div class="project-item">
-    <div class="project-item-head">
-      <img src="" alt="" />
+    <div class="project-item-head" @click="jumpToShow(item)">
+      <img class="project-image" :src="getImg(item.img)" alt="" />
     </div>
     <div class="project-item-content">
       <h3 class="project-title">{{ item.title }}</h3>
       <p class="project-desc">{{ item.desc }}</p>
       <div class="project-link">
-        <span>Preview</span>
-        <span>Github</span>
+        <span><a :href="item.preview" target=_blank>Preview</a></span>
+        <span><a :href="item.code">Code</a></span>
       </div>
     </div>
   </div>
@@ -26,7 +26,16 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    getImg(img) {
+      if (!img) return ''
+      return require(`../../assets/images/project/${img}`)
+    },
+    jumpToShow ({preview, code}) {
+      const url = preview || code || ''
+      url && window.open(url, 'black')
+    }
+  },
 };
 </script>
 
@@ -40,13 +49,30 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
   background: #fff;
   &-head {
+    box-sizing: border-box;
     width: 100%;
-    height: 180px;
-    background: #ccc;
+    height: 168px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
+    padding: 10px 8px;
+    display: flex;
+    justify-content: center;
+    .project-image{
+      flex-grow: 0;
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+    }
+    &:hover{
+      .project-image{
+        transform: scale(1.1);
+      }
+    }
   }
   &-content {
+    border-top: 1px solid #eee;
     padding: 10px 12px 14px;
     .project-title {
       margin: 0;
@@ -66,8 +92,12 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: #ff7260;
       cursor: pointer;
+
+      span a{
+        color: #ff7260;
+        text-decoration: none;
+      }
     }
   }
   &::before,
