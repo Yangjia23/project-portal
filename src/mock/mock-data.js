@@ -61,6 +61,15 @@ export const projectTypes = [
     value: 'CSS',
     children: [
       {
+        title: 'CSS Button Hover Effect',
+        desc: '给 Button 添加不同的 Hover 效果',
+        tag: ['组件'],
+        disabled: false,
+        img: 'css-button-hover-effect.png',
+        preview: 'https://codepen.io/Yangjia/full/XWXKXPN',
+        code: 'https://codepen.io/Yangjia/pen/XWXKXPN',
+      },
+      {
         title: 'CSS 实现正多边形',
         desc: '单个div用before、after伪元素实现正多边形',
         tag: ['组件'],
