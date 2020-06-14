@@ -8,7 +8,7 @@
       <p class="project-desc">{{ item.desc }}</p>
       <div class="project-link">
         <span><a :href="item.preview" target=_blank>Preview</a></span>
-        <span><a :href="item.code">Code</a></span>
+        <span><a :href="item.code" target=_blank>Code</a></span>
       </div>
     </div>
   </div>
