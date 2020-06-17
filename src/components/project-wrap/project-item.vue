@@ -7,8 +7,8 @@
       <h3 class="project-title">{{ item.title }}</h3>
       <p class="project-desc">{{ item.desc }}</p>
       <div class="project-link">
-        <span><a :href="item.preview" target=_blank>Preview</a></span>
-        <span><a :href="item.code" target=_blank>Code</a></span>
+        <span><a :href="item.preview" target="_blank">Preview</a></span>
+        <span><a :href="item.code" target="_blank">Code</a></span>
       </div>
     </div>
   </div>
@@ -28,13 +28,13 @@ export default {
   },
   methods: {
     getImg(img) {
-      if (!img) return ''
-      return require(`../../assets/images/project/${img}`)
+      if (!img) return '';
+      return require(`../../assets/images/project/${img}`);
     },
-    jumpToShow ({preview, code}) {
-      const url = preview || code || ''
-      url && window.open(url, 'black')
-    }
+    jumpToShow({ preview, code }) {
+      const url = preview || code || '';
+      url && window.open(url, 'black');
+    },
   },
 };
 </script>
@@ -57,16 +57,16 @@ export default {
     padding: 10px 8px;
     display: flex;
     justify-content: center;
-    .project-image{
+    .project-image {
       flex-grow: 0;
       width: 100%;
       height: auto;
       display: block;
       cursor: pointer;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
-    &:hover{
-      .project-image{
+    &:hover {
+      .project-image {
         transform: scale(1.1);
       }
     }
@@ -94,7 +94,7 @@ export default {
       justify-content: space-between;
       cursor: pointer;
 
-      span a{
+      span a {
         color: #ff7260;
         text-decoration: none;
       }

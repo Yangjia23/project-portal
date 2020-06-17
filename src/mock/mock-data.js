@@ -5,11 +5,13 @@ export const projectTypes = [
     value: 'JS',
     children: [
       {
-        title: '轮播图',
-        desc: '轮播图',
+        title: '图片懒加载',
+        desc: '使用原生JS实现图片懒加载',
         tag: ['组件'],
         disabled: false,
-        code: '',
+        img: 'lazy-load-img.png',
+        preview: 'https://codepen.io/Yangjia/full/qBbqmLo',
+        code: 'https://codepen.io/Yangjia/pen/qBbqmLo',
       },
       {
         title: 'xxxxxx',
