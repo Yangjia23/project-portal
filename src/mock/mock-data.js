@@ -5,6 +5,15 @@ export const projectTypes = [
     value: 'JS',
     children: [
       {
+        title: 'Canvas Tutorial (一)：交互',
+        desc: '利用 Canvas 实现酷炫交互效果',
+        tag: ['组件'],
+        disabled: false,
+        img: 'canvas-tutorial-interaction.gif',
+        preview: 'https://codepen.io/Yangjia/full/eYdyMeb',
+        code: 'https://codepen.io/Yangjia/pen/eYdyMeb',
+      },
+      {
         title: '图片懒加载',
         desc: '使用原生JS实现图片懒加载',
         tag: ['组件'],
